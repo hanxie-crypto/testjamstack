@@ -9,6 +9,7 @@ services:
   #     sourceCode: ${apiSource}
   website:
     component: jamstack
+    access: defaultx
     props:
       domain: ${vars.domain}
       favicon: false
