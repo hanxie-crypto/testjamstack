@@ -1,0 +1,32 @@
+edition: 1.0.0
+name: jamstack-website
+vars:
+  domain: testhanxie4.resume.net.cn
+services:
+  # api: 
+  #   component: fc-api
+  #   props:
+  #     sourceCode: ${apiSource}
+  website:
+    component: /Users/hanxie/opensource/devsapp/jamstack
+    props:
+      domain: ${vars.domain}
+      favicon: false
+      defaultApp: testjamstack
+      apps:
+        - name: testjamstack
+          type: jamstack
+          sourceCode: ${path(.)}/testjamstack
+          paths:
+            - /
+            - /~testjamstack
+          indexFile: index.html
+          page404Url:  404.html
+
+
+     
+        
+      
+      
+
+
