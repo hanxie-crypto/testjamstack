@@ -9,14 +9,12 @@ services:
   #     sourceCode: ${apiSource}
   website:
     component: jamstack
-    access: hanxie
     actions:
       pre-deploy:
         - run: npm i
           path: ${path(.)}/testjamstack
     props:
       domain: ${vars.domain}
-      
       favicon: false
       defaultApp: testjamstack
       apps:
