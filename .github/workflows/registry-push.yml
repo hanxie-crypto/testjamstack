@@ -13,5 +13,5 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npx @serverless-devs/s config add --AccountID ${{ secrets.ALIYUN_ACCOUNT_ID }} --AccessKeyID ${{ secrets.ALIYUN_ACCESS_KEY_ID }} --AccessKeySecret ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }} -a default
+      - run: npx @serverless-devs/s config add --AccountID ${{ secrets.ALIYUN_ACCOUNT_ID }} --AccessKeyID ${{ secrets.ALIYUN_ACCESS_KEY_ID }} --AccessKeySecret ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }} -a hanxie
       - run: npx @serverless-devs/s deploy

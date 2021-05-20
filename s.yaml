@@ -9,6 +9,7 @@ services:
   #     sourceCode: ${apiSource}
   website:
     component: jamstack
+    access: hanxie
     props:
       domain: ${vars.domain}
       favicon: false
