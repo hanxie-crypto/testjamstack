@@ -8,7 +8,7 @@ services:
   #   props:
   #     sourceCode: ${apiSource}
   website:
-    component: /Users/hanxie/opensource/devsapp/jamstack
+    component: jamstack
     props:
       domain: ${vars.domain}
       favicon: false
