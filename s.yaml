@@ -1,7 +1,7 @@
 edition: 1.0.0
 name: jamstack-website
 vars:
-  domain: testhanxie4.resume.net.cn
+  domain: testblog.resume.net.cn
 services:
   # api: 
   #   component: fc-api
@@ -12,20 +12,26 @@ services:
     actions:
       pre-deploy:
         - run: npm i
-          path: ${path(.)}/testjamstack
+          path: ${path(.)}/devsblog
     props:
       domain: ${vars.domain}
       favicon: false
-      defaultApp: testjamstack
+      defaultApp: devsblog
       apps:
-        - name: testjamstack
+        - name: devsblog
           type: jamstack
-          sourceCode: ${path(.)}/testjamstack
+          sourceCode: ${path(.)}/devsblog
           paths:
             - /
-            - /~testjamstack
+            - /~devsblog
           indexFile: index.html
           page404Url:  404.html
+        # - name: backendapi
+        #   type: backend
+        #   paths:
+        #     - /~httpbin
+        #   proxyUrl: http://httpbin.org/
+        
 
 
      
